@@ -1,0 +1,161 @@
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 300px;
+}
+
+.stock{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   grid-gap: 20px;
+}
+
+.stock-item{
+    border:1px solid #ccc;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.stock-item_info{
+    display: flex;
+    align-items: center;
+}
+
+.stock-item_cover{
+    flex: 0 0 30px;
+    margin-right: 15px;
+}
+
+.stock-item_cover img{
+    width: 100%;
+}
+
+.stock-item_title{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.stock-item_title span{
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color:#777;
+    margin-top: 2px;
+}
+
+.stock-item_price{
+    flex: 0 0 80px;
+    text-align: right;
+}
+
+.info{
+    margin-top: 20px;
+}
+
+
+.info__item{
+    border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -ms-border-radius:6px;
+    -o-border-radius:6px;
+    width: 320px;
+    height: auto;
+    margin-bottom: 30px;
+    border:1px solid #777;
+}
+
+
+.info__title{
+    font-size: 20px;
+    line-height: 120%;
+    padding: 5px 10px;
+}
+
+
+.info__img img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.mrx_pro_max section {
+	position: fixed;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #001300;
+	animation: changeColor 5s linear infinite;
+}
+
+@keyframes changeColor {
+	0%
+	{
+		filter: hue-rotate(0deg);
+	}
+	100%
+	{
+		filter: hue-rotate(360deg);
+	}
+}
+
+.mrx_pro_max section h2 {
+	color: #00ff0a;
+	font-family: consolas;
+	font-weight: 300;
+	letter-spacing: 10px;
+}
+
+.mrx_pro_max section .loader {
+	position: relative;
+	display: flex;
+}
+
+.mrx_pro_max section .loader .dot {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #00ff0a;
+	box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a,0 0 40px #00ff0a,0 0 60px #00ff0a,0 0 80px #00ff0a,0 0 100px #00ff0a;
+	margin: 20px 10px;
+	transform: scale(0.1);
+	border-radius: 50%;
+	animation: animateDot 2s linear calc(0.1s * var(--i)) infinite;
+}
+
+.mrx_pro_max section .loader:last-child .dot {
+	animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes animateDot {
+	0%
+	{
+		transform: scale(0.1);
+	}
+	10%
+	{
+		transform: scale(1);
+	}
+	50%,100%
+	{
+		transform: scale(0.1);
+	}
+}
